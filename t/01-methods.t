@@ -15,7 +15,7 @@ subtest device => sub {
     is $obj->manufacturer, 'Yamaha', 'manufacturer';
     is $obj->port_in, 'generic', 'port_in';
     is $obj->port_out, 'generic', 'port_out';
-    is $obj->cc, undef, 'cc';
+    is_deeply $obj->cc, {}, 'cc';
 };
 
 done_testing();
