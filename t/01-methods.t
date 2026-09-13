@@ -15,7 +15,7 @@ subtest device => sub {
     is $obj->manufacturer, 'Yamaha', 'manufacturer';
     is $obj->port_in, 'generic', 'port_in';
     is $obj->port_out, 'generic', 'port_out';
-    is_deeply $obj->cc->[0], { name => 'Bank Select', number => 0 }, 'cc';
+    is $obj->cc, undef, 'cc';
 };
 
 done_testing();
