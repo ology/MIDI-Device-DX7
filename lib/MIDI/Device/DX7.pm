@@ -2,7 +2,7 @@ package MIDI::Device::DX7;
 
 # ABSTRACT: Yamaha DX7 MIDI Metadata
 
-our $VERSION = '0.0100';
+our $VERSION = '0.0101';
 
 use Moo;
 extends 'MIDI::Device';
@@ -14,11 +14,11 @@ extends 'MIDI::Device';
   use MIDI::Device::DX7 ();
   my $device = MIDI::Device::DX7->new;
   print "Device: ", join(", ", $device->name, $device->manufacturer), "\n";
-  my $ccs = $device->cc; # [ { number => 1, name => 'Modulation' }, ... ]
+  my $ccs = $device->cc; # [ {} ] # None!
 
 =head1 DESCRIPTION
 
-Yamaha DX7 synthesizer device metadata and control change messages.
+Yamaha DX7 synthesizer device metadata. This device does not have control change messages, as the DX7 predates the widespread use of CC#s.
 
 =head1 ATTRIBUTES
 
