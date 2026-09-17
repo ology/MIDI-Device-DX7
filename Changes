@@ -1,4 +1,6 @@
 Revision history for MIDI-Device
 
 {{$NEXT}}
+
+0.0100 2026-09-17 11:50:18
   - Mint with Dist::Zilla.
